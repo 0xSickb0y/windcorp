@@ -1559,7 +1559,7 @@ _Windows PowerShell® Web Access, first introduced in Windows Server® 2012, act
 
 #### https://selfservice.windcorp.thm/
 
-This domain prompts for HTTP authentication, and at this point we do not have valid Credentials.
+This domain prompts for HTTP authentication, and at that point i did not had valid Credentials.
 
 ![Pasted image 20240810235617](https://github.com/user-attachments/assets/91a7eda8-cb08-4d80-b845-b7c9a883f041)
 ![Pasted image 20240810235258](https://github.com/user-attachments/assets/e2714cb3-553b-4014-a4e7-967417871091)
@@ -1672,7 +1672,7 @@ Once again you find yourself on the internal network of the Windcorp Corporation
 
 However, they managed to secure the Domain Controller this time, so you need to find another server and on your first scan discovered "Set".
 
-Set is used as a platform for developers and has had some problems in the recent past. They had to reset a lot of users and restore backups (maybe you were not the only hacker on their network?). So they decided to make sure all users used proper passwords and closed of some of the loose policies. Can you still find a way in? Are some user more privileged than others? Or some more sloppy? And maybe you need to think outside the box a little bit to circumvent their new security controls…
+Set is used as a platform for developers and has had some problems in the recent past. They had to reset a lot of users and restore backups (maybe you were not the only hacker on their network?). So they decided to make sure all users used proper passwords and closed of some of the loose policies. Can you still find a way in? Are some users more privileged than others? Or some more sloppy? And maybe you need to think outside the box a little bit to circumvent their new security controls…
 
 ### Reconnaissance Set
 
@@ -1810,7 +1810,7 @@ Reference:
 
 > https://www.trendmicro.com/en_us/research/17/e/rising-trend-attackers-using-lnk-files-download-malware.html
 
-I created a malicious `.lnk` file that exploits how Windows handles shortcut icons. By setting the icon path to a network share controlled by us, the target machine attempts to retrieve the icon, triggering NTLM authentication requests to our server. This allows us to capture the machine’s authentication credentials.
+I created a malicious `.lnk` file that exploits how Windows handles shortcut icons. By setting the icon path to a network share controlled by me, the target machine attempts to retrieve the icon, triggering NTLM authentication requests to my server. This allowed me to capture the machine’s authentication credentials.
 
 ![Pasted image 20240812183056](https://github.com/user-attachments/assets/4ef6ff3a-3735-4910-a755-a4466f31790e)
 
@@ -1848,7 +1848,7 @@ Veeam ONE Agent uses .NET data serialization mechanisms. The remote attacker may
 
 The deserialization of untrusted data is performed during TLS Handshake (vulnerability tracked as **ZDI-CAN-10400** and **CVE-2020-10914**) and during logging of error messages (vulnerability tracked as **ZDI-CAN-10401** and **CVE-2020-10915**).
 
-Since Veeam is running on localhost, I used [Plink](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to establish an SSH tunnel to our machine. This forwarded port 2805, allowing me to access the Veeam service remotely through the tunnel.
+Since Veeam is running on localhost, I used [Plink](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to establish an SSH tunnel to my machine. This forwarded port 2805, allowing me to access the Veeam service remotely through the tunnel.
 
 ![Pasted image 20240814005504](https://github.com/user-attachments/assets/72a2b732-85b0-43ce-965e-4b475e83e8d3)
 
@@ -2123,15 +2123,15 @@ With my exploit script correctly configured, I still had to update Metasploit wi
 
 ![Pasted image 20240814004521](https://github.com/user-attachments/assets/d6efbb4b-5d04-4ac7-a0b2-3f3510d72255)
 
-After receiving the ICMP packets and confirming that command execution was working correctly, I proceeded to escalate my privileges by executing our stager.
+After receiving the ICMP packets and confirming that command execution was working correctly, I proceeded to escalate my privileges by executing the stager.
 
-This step involves leveraging the permissions associated with the service, which granted me a reverse shell with the same privileges as the service owner.
+This step involved leveraging the permissions associated with the service, which granted me a reverse shell with the same privileges as the service owner.
 
 ![Pasted image 20240814004555](https://github.com/user-attachments/assets/0249e708-a4ee-4c5f-9f03-dca64522d0ff)
 
 ### Goal Execution Set
 
-After executing the payload, I obtained a reverse shell as  `set\one`, who was a member of several privileged groups. This elevated access allowed me to further escalate my privileges, enabling me to gain a shell as `Administrator` and secure RDP access to the system.
+After executing the payload, I obtained a reverse shell as  `set\one`, who was a member of several privileged groups. This elevated access allowed me to further escalate my privileges, granting me a shell as `Administrator` and RDP access to the system.
 
 ![Pasted image 20240814005951](https://github.com/user-attachments/assets/679145b6-df63-49a2-bb88-1d3cb0d4a4ad)
 
