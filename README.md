@@ -512,9 +512,9 @@ The security questions used are weak and could potentially be guessed or discove
 
 ![Pasted image 20240807201932](https://github.com/user-attachments/assets/4ea2a73a-08bb-4aa4-a8a4-3e600fd532c2)
 
-One of the questions asks for the user's favorite pet name. We discovered that an employee named Lily Levesque has a dog named Sparky, as evidenced by her picture on the company portal.
+One of the questions asks for the user's favorite pet name. I discovered that an employee named Lily Levesque has a dog named Sparky, as evidenced by her picture on the company portal.
 
-Using this information, i've successfully answered the security question, which allowed us to reset the password to `ChangeMe#1234`.
+Using this information, i've successfully answered the security question, which allowed me to reset the password to `ChangeMe#1234`.
 
 This vulnerability allows unauthorized users to not only reset passwords but also see the new password immediately, facilitating unauthorized access to user accounts.
 
