@@ -1,7 +1,7 @@
 # windcorp
 Pentest report for the windcorp series of CTF challenges.
 
-# Index Table
+## Index Table
 
 - [Ra](#ra)
   - [Reconnaissance](#reconnaissance-ra)
