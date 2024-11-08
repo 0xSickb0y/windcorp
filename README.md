@@ -1,5 +1,7 @@
 # windcorp
-Pentest report for the windcorp series of CTF challenges.
+Pentest Report for Windcorp CTF Challenges
+
+This report details the findings, methodologies, and steps taken during the penetration testing of the Windcorp series of Capture The Flag challenges. This is a practice documentation and is by no means a professional assessment. The purpose of this report is to outline key vulnerabilities, exploitation techniques and methodology.
 
 ## Index Table
 
