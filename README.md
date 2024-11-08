@@ -475,7 +475,7 @@ PORT     STATE SERVICE             REASON  VERSION
 
 ### Company Portal
 
-the http://wincorp.thm:80/ page, which serves as a default company portal, there are two notable findings:
+In the http://wincorp.thm:80/ page, which serves as a default company portal, there are two notable findings:
 
 1. **Employee/IT Staff Usernames**: The page lists several usernames associated with company employees and IT staff. This exposure of usernames assisted in targeting specific individuals within the organization.
 
