@@ -592,7 +592,7 @@ In the "Users" share, i've have encountered a collection of individual home dire
 
 ![Pasted image 20240807210750](https://github.com/user-attachments/assets/9e4218df-9c75-4a4d-a46a-941c6d93b0b4)
 
-After downloading and installing the software, we can log in using the credentials obtained from the earlier password reset process, which are associated with the user account lilyle@windcorp.thm. This allows us to access the Spark client and interact with the company’s internal messaging system.
+After downloading and installing the software, I logged in using the credentials obtained from the earlier password reset process, which are associated with the user account lilyle@windcorp.thm. This allowed me to access the Spark client and interact with the company’s internal messaging system.
 
 ### CVE-2020-12772
 
@@ -755,7 +755,7 @@ The PowerShell script reads values from `C:\Users\brittanycr\hosts.txt`, process
 
 ### Privilege Escalation
 
-To exploit the `checkserver.ps1` script, i've used out Account Operators privileges to reset the password of the user who owns the text file `hosts.txt` (brittanycr@windcorp.thm). 
+To exploit the `checkserver.ps1` script, i've used our Account Operators privileges to reset the password of the user who owns the text file `hosts.txt` (brittanycr@windcorp.thm). 
 
 ```powershell
 $ Set-ADAccountPassword -Identity brittanycr -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "PASSWORD_HERE" -Force)
